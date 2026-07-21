@@ -65,6 +65,36 @@ Tier 1's five-principle scoring is inspired in part by a 2026 paper on structura
 
 v1, live, built solo end to end — architecture, 11-stage LLM pipeline, frontend, deployment.
 
+## Example Run
+
+A single prompt analysis, start to finish.
+
+**Input + structure tree + five-principle score.** The prompt is decomposed into 
+persona/goal/task branches, and scored against the five principles — here catching 
+a conflicting output-format rule buried in a task branch.
+
+![Analyze input and structure tree](01-analyze-prompt.png)
+
+**Defects found.** Contradictions, orphaned leaves, and override conflicts, each 
+with a root cause and a proposed fix.
+
+![Defects list](02-structure-tree-score.png)
+
+**Obstacle stress test.** Non-adversarial edge cases run against the actual prompt, 
+graded pass / silent_failure / graceful_degradation / over_conservative.
+
+![Obstacle stress test results](03-defects-and-obstacles.png)
+
+Each obstacle expands into expected vs. actual behavior plus the grader's rationale:
+
+![Obstacle debug detail](04-defects-and-obstacles.png)
+
+**Rewritten prompt.** All findings folded into a single restructured pass, then 
+re-run against the same obstacle set — pass rate went from 4/9 to 6/9, with a 
+27.59% token reduction.
+
+![Rewritten prompt](05-rewritten-prompt.png)
+
 ## Roadmap
 
 - Cross-model unambiguity checking as a full third mode
