@@ -95,6 +95,8 @@ re-run against the same obstacle set — pass rate went from 4/9 to 6/9, with a
 
 ![Rewritten prompt](05-rewritten-prompt.png)
 
+Reference paper: [Link] (https://arxiv.org/pdf/2604.21090)
+
 ## Roadmap
 
 - Cross-model unambiguity checking as a full third mode
