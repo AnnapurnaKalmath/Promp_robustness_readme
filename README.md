@@ -4,8 +4,6 @@
 
 **A diagnostic tool for AI prompts — tests specification completeness, not just adversarial robustness.**
 
-Live: [Railway URL](https://promptrobustness-production.up.railway.app/)
-
 Most prompt-testing tools check whether a prompt can be jailbroken. Structural checks something different and, in production, more common: whether a prompt is *structurally complete* for the job it's meant to do — whether it silently breaks on ordinary, non-adversarial inputs because nobody thought to specify what should happen.
 
 ---
